@@ -145,29 +145,6 @@ var main = (function($) { var _ = {
 		// Thumbnails.
 			_.$thumbnails = $('#thumbnails');
 
-		// Dynamische thumbnail update
-		_.$workItems = $('.work-item'); // Zorg ervoor dat je de werkknoppen selecteert die de thumbnail moeten veranderen.
-
-		// Voeg event listener toe om thumbnail te wijzigen
-		_.$workItems.each(function() {
-			$(this).on('click', function() {
-				var thumbnailSrc = $(this).data('thumbnail');
-				var fullsizeSrc = $(this).data('fullsize');
-
-				// Wijzig de thumbnail afbeelding
-				var $thumbnailElement = $('.thumbnails .thumbnail img');
-				if ($thumbnailElement.length) {
-					$thumbnailElement.attr('src', thumbnailSrc);
-				}
-
-				// Wijzig de link naar de fullsize afbeelding
-				var $thumbnailLink = $('.thumbnails .thumbnail');
-				if ($thumbnailLink.length) {
-					$thumbnailLink.attr('href', fullsizeSrc);
-				}
-			});
-		});
-
 		// Viewer.
 			_.$viewer = $(
 				'<div id="viewer">' +
@@ -228,21 +205,6 @@ var main = (function($) { var _ = {
 						_.$body.removeClass('is-preload-0');
 					}, 100);
 
-				});
-		
-		// Bind thumbnail click event (indien nodig voor andere functionaliteit)
-				_.$thumbnails.on('click', '.thumbnail', function(event) {
-					var $this = $(this);
-		
-					// Stop andere events
-					event.preventDefault();
-					event.stopPropagation();
-		
-					// Locked? Blur.
-					if (_.locked) $this.blur();
-		
-					// Switch naar de juiste slide
-					_.switchTo($this.data('index'));
 				});
 
 		// Viewer.
@@ -417,6 +379,24 @@ var main = (function($) { var _ = {
 	 */
 	initViewer: function() {
 
+		// Bind thumbnail click event.
+			_.$thumbnails
+				.on('click', '.thumbnail', function(event) {
+
+					var $this = $(this);
+
+					// Stop other events.
+						event.preventDefault();
+						event.stopPropagation();
+
+					// Locked? Blur.
+						if (_.locked)
+							$this.blur();
+
+					// Switch to this thumbnail's slide.
+						_.switchTo($this.data('index'));
+
+				});
 
 		// Create slides from thumbnails.
 			_.$thumbnails.children()
