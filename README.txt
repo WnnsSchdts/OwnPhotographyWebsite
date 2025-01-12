@@ -1,106 +1,155 @@
-Lens by HTML5 UP
+Big Picture by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
 
-This is Lens, a full screen (and entirely responsive) photo gallery design. Unlike previous
-designs I've done in this vein (Parallelism, for instance), this one eschews the usual
-lightbox in favor of a completely full screen experience -- one that I'm happy to say
-translates awesomely all the way down to the tiniest of mobile devices. Full instructions
-below!
+This is Big Picture, a simple, single page responsive site template by HTML5 UP.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+So I've been on a single page kick as of late, partly because I'm lazy, but
+mostly because they kick ass for experimentation. In this case, Big Picture
+makes heavy use of my (tentatively named and soon to be released) "scrollgress"
+and "scrollwatch" jQuery plugins to pull off some interesting effects as you
+scroll around the page. In addition to said interesting effects, Big Picture
+also includes a nice lightbox-style gallery, styling for basic page elements,
+and thoroughly commented code for your editing pleasure (with instructions!
+-- see below).
 
-(* = Not included)
+Many thanks to my good friends Felicia Simion (ineedchemicalx.deviantart.com)
+and Michael Domaradzki (md.photomerchant.net) for allowing me to use their amazing
+photos in Big Picture's demo*.
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+(* = Not included! Only meant for use with my own on-site demo, so please do NOT
+download and/or use any of Felicia's or Michael's work without their explicit
+permission!)
 
 AJ
 aj@lkn.io | @ajlkn
+
+PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
 
 
 Instructions:
 
 	Overview:
 
-		Lens is made up of three primary components:
+		Being a single pager, Big Picture should be way simpler to work with than
+		some of the heavier stuff I've released in the past. In fact, aside from
+		a main page <header> and <footer>, it's pretty much just a stack of "main"
+		<section> elements that follow the same basic pattern:
 
-		- The "main wrapper": The skinny little column on the right. Home to what little
-		  "regular" content you may have (header, footer, anything else you want to cram
-		  in there), as well as ...
+			<section id="foobar" class="main">
+				<div class="content container">
+					<header>
+						<h2>Foobar</h2>
+					</header>
+					...
+				</div>
+			</section>
 
-		- The "thumbnails" section: A grid of thumbnails pointing to their respective
-		  full size images.
+		The section can then be assigned a style class to determine its basic
+		look (and, in some cases, its behavior):
 
-		- The "viewer": Basically the rest of the page, and basically where your full size
-		  images will show up when a thumbnail is clicked.
+			style1
+				Centered content with an oversized <h2>. Works best when
+				paired with a background image or color.
 
-		Note: Only the main wrapper and the thumbnails section are actually present in
-		index.html. The viewer will be dynamically created on page load.
+			style2 left
+				Content in a box, anchored to the left side of the window. Works
+				best when paired with a background image or color. If you have
+				"useSectionTransitions" turned on in your settings, the box will
+				slide into view from the left.
 
-	How it works:
+			style2 right
+				Content in a box, anchored to the right side of the window. Works
+				best when paired with a background image or color. If you have
+				"useSectionTransitions" turned on in your settings, the box will
+				slide into view from the right.
 
-		Just add your thumbnails to the thumbnails section in the following format:
+			style3 primary
+				Used for generic content. Set against the primary background
+				color (default is white).
 
-			<article>
-				<a class="thumbnail" href="path/to/fullsize.jpg">
-					<img src="path/to/thumbnail.jpg" alt="" />
+			style3 secondary
+				Used for generic content. Set against the secondary background
+				color (default is a light gray).
+
+		Oh, and there are a few (well, two) optional modifier classes you can
+		tack on for additional effects:
+
+			dark
+				Flips the content's color scheme so it shows up better
+				against darker background images and colors.
+
+			fullscreen
+				Makes the section fill the entire window (only if "useFullScreen"
+				is enabled in your settings).
+
+
+	Lightbox Gallery:
+
+ 		The actual gallery function is powered by my Poptrox plugin. For info on
+ 		how that works, go here: github.com/ajlkn/jquery.poptrox
+
+		Each image (the '...' bit in the above examples) should look like this:
+
+			<article class="from-(direction)">
+				<a href="path/to/fullsize.jpg" class="image fit">
+					<img src="path/to/thumbnail.jpg" title="This is the image caption." alt="" />
 				</a>
-				<h2>Title</h2>
-				<p>Description.</p>
 			</article>
 
-		And that's it. Lens will figure out the rest.
+		The "from-(direction)" class indicates the direction from which the image should
+		slide into view, and can be any of the following:
 
-	The "data-position" attribute:
+			from-left
+			from-right
+			from-bottom
+			from-left
 
-		As a full screen experience, the viewer will be subject to changes in its size and,
-		consequently, its aspect ratio. Since your full size images are basically applied as
-		backgrounds to the viewer itself, this means they'll probably (okay, definitely) get
-		cropped. All is not lost, however, as you can use the optional "data-position" attribute
-		to control how the full size image is positioned within the viewer. To do this, simply
-		add it to your thumbnail's <a> element and set it to any valid "background-position"
-		value. For example, this:
+		You can also just remove the "from-(direction)" class if you don't want that particular
+		image to slide into view (in which case it'll simply fade in).
 
-			<a class="thumbnail" href="path/to/fullsize.jpg" data-position="top left">...</a>
 
-		... positions this particular full size image in the top left corner of the viewer (as
-		opposed to its center, the default), effectively limiting cropping to everything but
-		the top left corner.
+	Contact Form:
 
-	Keyboard shortcuts:
+		To get this working, place a script on your server to receive the form data, then
+		point the "action" attribute to it (eg. action="http://mydomain.tld/mail.php").
+		More on how it all works here: 1stwebdesigner.com/tutorials/custom-php-contact-forms
 
-		Lens is set up to respond to the following keyboard shortcuts:
 
-		- Left Arrow: Go to previous image.
-		- Right Arrow: Go to next image.
-		- Up Arrow: Go to image above the current one in the thumbnails section.
-		- Down Arrow: Go to image below the current one in the thumbnails section.
-		- Space: Go to next image.
-		- Escape: Toggle the main wrapper.
+    Icons:
 
-		Note: All keyboard shortcuts are disabled when the "xsmall" breakpoint is active
-		(since they don't really make a whole lot of sense there).
+     	Powered by Font Awesome. Go here for a full listing of all the icons you can use:
+     	fontawesome.io
 
-	Other stuff:
 
-		- The main wrapper can be moved to the left by changing the "misc.main-side" variable
-		  in assets/sass/libs/_vars.scss to "left" (and of course recompiling your CSS).
+	Other Stuff:
 
-		- Additional tweakable settings can be found at the top of assets/js/main.js, but
-		  be aware most of these need to sync with certain Sass variables (see comments
-		  for details).
+		- If you don't like the way images are tinted, either change "images/overlay.png"
+		  to something else, or remove all references to it from css/style.css.
 
 
 Credits:
 
 	Demo Images:
-		Unsplash (unsplash.com)
+		Felicia Simion (ineedchemicalx.deviantart.com)
+			"The Swallow Song"
+			"Mind is a clear stage"
+			"The Anonymous Red"
+			"The sparkling shell"
+			"Carry on"
+
+		Michael Domaradzki (md.photomerchant.net)
+			"Vine Country"
+			"Airchitecture II"
+			"Bent IX"
+			"Air Lounge"
 
 	Icons:
 		Font Awesome (fontawesome.io)
 
 	Other:
 		jQuery (jquery.com)
+		Poptrox (github.com/ajlkn/jquery.poptrox)
+		Scrollex (github.com/ajlkn/jquery.scrollex)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
