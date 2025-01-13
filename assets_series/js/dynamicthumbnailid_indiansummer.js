@@ -6,7 +6,7 @@ const folderThumbs = "images/EindwerkToegepastefotografie/thumbs/";
 const thumbnailsContainer = document.getElementById("thumbnails_indiansummer");
 
 // Haal de lijst van afbeeldingen op van de server
-fetch('get_images_indiansummer.php')
+fetch('assets_series/js/get_images_indiansummer.php')
   .then(response => response.json()) // Zet de JSON om naar een JavaScript-array
   .then(images => {
       // Voor elke afbeelding in de lijst
