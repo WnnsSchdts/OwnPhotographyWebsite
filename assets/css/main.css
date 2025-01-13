@@ -662,7 +662,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #98c593;
+		background-color: #f57657;
 		border: 0;
 		border-radius: 3.5em;
 		color: #ffffff;
@@ -745,7 +745,7 @@ input, select, textarea {
 			input[type="reset"].style2:hover,
 			.button.style2:hover,
 			button.style2:hover {
-				background-color: rgba(229, 230, 231, 0.25);
+				background-color: rgba(245, 118, 87, 0.25);
 			}
 
 			input[type="button"].style2:active,
@@ -753,7 +753,7 @@ input, select, textarea {
 			input[type="reset"].style2:active,
 			.button.style2:active,
 			button.style2:active {
-				background-color: rgba(229, 230, 231, 0.375);
+				background-color: rgba(245, 118, 87, 0.375);
 			}
 
 			input[type="button"].style2.down,
@@ -763,32 +763,34 @@ input, select, textarea {
 			button.style2.down {
 				background-image: url("images/arrow.svg");
 			}
-			
+
+		input[type="button"].style3,
+		input[type="submit"].style3,
+		input[type="reset"].style3,
+		.button.style3,
+		button.style3 {
+		  --b: 2px;   /* border thickness */
+		  --s: .45em; /* size of the corner */
+		  --color: #e5e6e7;
+		  
+		  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+		  color: var(--color);
+		  --_p: var(--s);
+		  background:
+		    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+		    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+		  transition: .3s linear, color 0s, background-color 0s;
+		  outline: var(--b) solid #0000;
+		  outline-offset: .6em;
+		  font-size: 16px;
 		
+		  border: 0;
 		
-			button.style3 {
-			  --b: 2px;   /* border thickness */
-			  --s: .45em; /* size of the corner */
-			  --color: #e5e6e7;
-			  
-			  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-			  color: var(--color);
-			  --_p: var(--s);
-			  background:
-			    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-			    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-			  transition: .3s linear, color 0s, background-color 0s;
-			  outline: var(--b) solid #0000;
-			  outline-offset: .6em;
-			  font-size: 16px;
-			
-			  border: 0;
-			
-			  user-select: none;
-			  -webkit-user-select: none;
-			  touch-action: manipulation;
-			}
-			
+		  user-select: none;
+		  -webkit-user-select: none;
+		  touch-action: manipulation;
+		}
+		
 			button.style3:hover,
 			button.style3:focus-visible{
 			  --_p: 0px;
