@@ -182,7 +182,7 @@ input, select, textarea {
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
+			color:  #f57657;
 			text-decoration: none;
 		}
 
@@ -1011,7 +1011,7 @@ input, select, textarea {
 					top: 0;
 					width: 100%;
 					height: 100%;
-					box-shadow: inset 0 0 0 2px #00D3B7, inset 0 0 0px 3px rgba(0, 0, 0, 0.15);
+					box-shadow: inset 0 0 0 2px  #f57657, inset 0 0 0px 3px rgba(0, 0, 0, 0.15);
 					opacity: 0;
 					z-index: 1;
 				}
