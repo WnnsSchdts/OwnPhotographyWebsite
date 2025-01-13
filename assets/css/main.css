@@ -768,7 +768,7 @@ input, select, textarea {
 		input[type="submit"].style3,
 		input[type="reset"].style3,
 		.button.style3,
-		button.style3 {
+		.button.style3 {
 		  --b: 2px;   /* border thickness */
 		  --s: .45em; /* size of the corner */
 		  --color: #e5e6e7;
@@ -791,14 +791,14 @@ input, select, textarea {
 		  touch-action: manipulation;
 		}
 		
-			button.style3:hover,
-			button.style3:focus-visible{
+			.button.style3:hover,
+			.button.style3:focus-visible{
 			  --_p: 0px;
 			  outline-color: var(--color);
 			  outline-offset: .05em;
 			}
 			
-			button.style3:active {
+			.button.style3:active {
 			  background: var(--color);
 			  color: #fff;
 			}
