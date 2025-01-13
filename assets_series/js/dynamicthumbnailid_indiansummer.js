@@ -3,7 +3,7 @@ const folderFulls = "images/EindwerkToegepastefotografie/fulls/";
 const folderThumbs = "images/EindwerkToegepastefotografie/thumbs/";
 
 // Selecteer de thumbnails-container
-const thumbnailsContainer = document.getElementById("thumbnails");
+const thumbnailsContainer = document.getElementById("thumbnails_indiansummer");
 
 // Haal de lijst van afbeeldingen op van de server
 fetch('get_images_indiansummer.php')
