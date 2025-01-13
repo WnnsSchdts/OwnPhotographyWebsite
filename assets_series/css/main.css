@@ -368,6 +368,13 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
+/* Image button */
+
+	.image-button {
+	    border-bottom: none; /* Geen onderlijn */
+	}
+
+
 /* Form */
 
 	form {
