@@ -434,7 +434,7 @@ input, select, textarea {
 			transform-origin: 50% 50%;
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: 'Bauhaus 93', sans-serif;
+			font-family: 'Josefin Sans', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -500,7 +500,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: 'Bauhaus 93', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
@@ -970,7 +970,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Bauhaus 93', sans-serif;
+			font-family: 'Josefin Sans', sans-serif;
 			font-weight: 400;
 		}
 
@@ -987,7 +987,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Bauhaus 93', sans-serif;
+			font-family: 'Josefin Sans', sans-serif;
 		}
 
 /* Image */
@@ -1296,7 +1296,7 @@ input, select, textarea {
 				animation: spinner-rotate 0.75s infinite linear !important;
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: 'Bauhaus 93', sans-serif;
+				font-family: 'Josefin Sans', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
