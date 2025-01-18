@@ -7,7 +7,7 @@
   <style>
     :root {
       --columns: 3; /* Pas dit aan voor het aantal kolommen */
-      --gap: 20px; /* Ruimte tussen de kolommen */
+      --gap: 40px; /* Ruimte tussen de kolommen, verdubbeld */
     }
 
     body {
@@ -29,19 +29,20 @@
       justify-content: center;
       align-items: flex-start; /* Zorg dat de foto bovenaan wordt uitgelijnd */
       background-color: #000; /* Zwarte achtergrond als vulruimte */
-      border: 2px solid #fff; /* Witte rand rond de foto zelf */
-      padding: 5px; /* Voeg extra ruimte rond de foto toe */
+      padding: 20px; /* Verdubbelde ruimte rond de foto */
       box-sizing: border-box;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
 
     .photo-section a img {
+      border: 2px solid #fff; /* Witte rand rond de foto zelf */
       width: auto;
       max-width: 100%;
       height: auto;
       max-height: 100%;
       object-fit: contain; /* Zorg ervoor dat de hele foto zichtbaar blijft */
+      display: block;
     }
 
     .photo-section a:hover {
