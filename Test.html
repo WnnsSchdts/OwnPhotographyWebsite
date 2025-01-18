@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Section</title>
+  <style>
+    :root {
+      --columns: 3; /* Pas dit aan voor het aantal kolommen */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .photo-section {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .photo-section img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1; /* Zorg voor vierkante kaders */
+      object-fit: cover;
+      border: 2px solid #fff; /* Witte rand */
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-section img:hover {
+      transform: scale(1.05); /* Een klein inzoom-effect bij hover */
+    }
+
+    /* Lichtbox-stijl */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lightbox:target {
+      display: flex; /* Toon de lichtbox wanneer de target actief is */
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<section class="photo-section">
+  <!-- Voeg hier de foto's toe -->
+  <a href="#lightbox1"><img src="images/thumbs/01.jpg" alt="Photo 1"></a>
+  <a href="#lightbox2"><img src="images/thumbs/02.jpg" alt="Photo 2"></a>
+  <a href="#lightbox3"><img src="images/thumbs/03.jpg" alt="Photo 3"></a>
+  <a href="#lightbox3"><img src="images/thumbs/04.jpg" alt="Photo 4"></a>
+  <a href="#lightbox3"><img src="images/thumbs/05.jpg" alt="Photo 5"></a>
+  <a href="#lightbox3"><img src="images/thumbs/06.jpg" alt="Photo 6"></a>
+  <a href="#lightbox3"><img src="images/thumbs/07.jpg" alt="Photo 7"></a>
+  <a href="#lightbox3"><img src="images/thumbs/08.jpg" alt="Photo 8"></a>
+  <a href="#lightbox3"><img src="images/thumbs/09.jpg" alt="Photo 9"></a>
+  <a href="#lightbox3"><img src="images/thumbs/10.jpg" alt="Photo 10"></a>
+  <!-- Voeg meer foto's toe zoals nodig -->
+</section>
+
+<!-- Lichtbox voor vergroting -->
+<div id="lightbox1" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/01.jpg" alt="Photo 1">
+</div>
+<div id="lightbox2" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/02.jpg" alt="Photo 2">
+</div>
+<div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/03.jpg" alt="Photo 3">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/04.jpg" alt="Photo 4">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/04.jpg" alt="Photo 5">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/06.jpg" alt="Photo 6">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/07.jpg" alt="Photo 7">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/08.jpg" alt="Photo 8">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/09.jpg" alt="Photo 9">
+</div>
+  <div id="lightbox3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="images/fulls/10.jpg" alt="Photo 10">
+</div>
+  
+
+</body>
+</html>
