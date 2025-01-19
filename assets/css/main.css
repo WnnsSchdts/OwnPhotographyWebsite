@@ -2391,6 +2391,11 @@ input, select, textarea {
 		}
 
 /* Opmaak van de subpagina van de series. 
+
+		:root {
+			--columns: 3; /* Aantal kolommen */
+			--gap: 40px;  /* Ruimte tussen de kolommen */
+		}
 		
 		.photo-section {
 		display: grid;
