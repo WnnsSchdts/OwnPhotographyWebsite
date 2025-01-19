@@ -2368,7 +2368,7 @@ input, select, textarea {
 		}
 
 		
-		/* Scrollbar breedte en achtergrond */
+/* Scrollbar breedte en achtergrond */
 		::-webkit-scrollbar {
 		  width: 12px; /* Breedte van de verticale scrollbar */
 		  height: 12px; /* Hoogte van de horizontale scrollbar */
@@ -2390,8 +2390,7 @@ input, select, textarea {
 		  background: #555;
 		}
 
-
-		/* Opmaak van de subpagina van de series. 
+/* Opmaak van de subpagina van de series. 
 		
 		.photo-section {
 		display: grid;
