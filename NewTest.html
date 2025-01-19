@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Wannes Schodts Photography</title>
@@ -13,238 +8,129 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			:root {
-				--columns: 3;		<! Pas het aantal kolommen aan>
-				--gap: 40px;		<! Pas de afstand tussen kolommen aan>
-			}
-
-			.photo-section {
-				display: grid;
-				grid-template-columns: repeat(var(--columns), 1fr);
-				gap: var(--gap);
-				padding: 20px;
-			}
-
-			.photo-section a {
-				display: flex;
-				justify-content: center;
-				align-items: flex-start;
-				background-color: #000;
-				padding: 20px;
-				box-sizing: border-box;
-				cursor: pointer;
-				transition: transform 0.3s ease;
-			}
-
-			.photo-section a img {
-				border: 2px solid #fff;
-				width: auto;
-				max-width: 100%;
-				height: auto;
-				max-height: 100%;
-				object-fit: contain;
-				display: block;
-			}
-
-			.photo-section a:hover {
-				transform: scale(1.05);
-			}
-
-			.lightbox {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.9);
-				display: none;
-				justify-content: center;
-				align-items: center;
-				z-index: 1000;
-			}
-
-			.lightbox img {
-				max-width: 90%;
-				max-height: 90%;
-			}
-
-			.lightbox:target {
-				display: flex;
-			}
-
-			.lightbox .close {
-				position: absolute;
-				top: 20px;
-				right: 20px;
-				color: #fff;
-				font-size: 30px;
-				text-decoration: none;
-				font-weight: bold;
-			}
-
-			.lightbox .nav {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				color: #fff;
-				font-size: 50px;
-				text-decoration: none;
-				font-weight: bold;
-				padding: 10px;
-				background: rgba(0, 0, 0, 0.5);
-				border-radius: 5px;
-				cursor: pointer;
-			}
-
-			.lightbox .nav.prev {
-				left: 20px;
-			}
-
-			.lightbox .nav.next {
-				right: 20px;
+				--columns: 3; /* Aantal kolommen */
+				--gap: 40px;  /* Ruimte tussen de kolommen */
 			}
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<h1>Wannes Schodts Photograph</h1>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<h1>Wannes Schodts Photography</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+		</header>
 
 		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2>My stories</h2>
-					</header>
-					<p>Humanity and It's Nature</p>
-					<footer>
-						<a href="#work" class="button style2 down">More</a>
-					</footer>
-				</div>
-			</section>
+		<section id="intro" class="main style1 dark fullscreen">
+			<div class="content">
+				<header>
+					<h2>My Stories</h2>
+				</header>
+				<p>Humanity and Its Nature</p>
+				<footer>
+					<a href="#work" class="button style2 down">More</a>
+				</footer>
+			</div>
+		</section>
+
 		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>Humanity and It's Nature</h2>
-						<p>My photography journey started in 2011. For my birthday, I received a camera from my stepmother—a Lumix bridge camera. Nothing special, but perfect for my first steps.
-							I started taking pictures during the holidays. We traveled to France, Norway, Poland, and Croatia. Later on, I began traveling by myself. Thousands and thousands of pictures, taken by me, each telling a story.
-							But I wasn’t happy with the quality of my pictures. So, I started taking photography courses at KISP. I learned all the tips and tricks from the wonderful teachers
-							Now,it’s time to show the world what I’ve developed over these years. </p>
-					</header>
-					<footer>
-						<a href="#series" class="button style2 down">More</a>
-					</footer>
-			</section>
+		<section id="work" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Humanity and Its Nature</h2>
+					<p>My photography journey started in 2011. For my birthday, I received a camera from my stepmother—a Lumix bridge camera. Nothing special, but perfect for my first steps.
+					I started taking pictures during the holidays. We traveled to France, Norway, Poland, and Croatia. Later on, I began traveling by myself. Thousands and thousands of pictures, taken by me, each telling a story.
+					But I wasn’t happy with the quality of my pictures. So, I started taking photography courses at KISP. I learned all the tips and tricks from the wonderful teachers.
+					Now, it’s time to show the world what I’ve developed over these years.</p>
+				</header>
+			</div>
+		</section>
+
+		<!-- Link to My Work -->
+		<section id="series" class="main style3 primary">
+			<a href="#photo-section" class="button style2 down">Next</a>
+		</section>
 
 		<!-- Photo Section -->
-			<section id="series" class="main style4 primary">
-				<a href="#photo-section" class="button style2 down">Next</a>
-			</section>
-
-		<!-- Photo Section -->
-			<section id="photo-section" class="main style4 primary">
-				<a href="#lightbox1"><img src="images/thumbs/01.jpg" alt="Photo 1"></a>
-				<a href="#lightbox2"><img src="images/thumbs/02.jpg" alt="Photo 2"></a>
-				<a href="#lightbox3"><img src="images/thumbs/03.jpg" alt="Photo 3"></a>
-				<a href="#lightbox4"><img src="images/thumbs/04.jpg" alt="Photo 4"></a>
-				<a href="#lightbox5"><img src="images/thumbs/05.jpg" alt="Photo 5"></a>
-				<a href="#lightbox6"><img src="images/thumbs/06.jpg" alt="Photo 6"></a>
-				<a href="#lightbox7"><img src="images/thumbs/07.jpg" alt="Photo 7"></a>
-				<a href="#lightbox8"><img src="images/thumbs/08.jpg" alt="Photo 8"></a>
-				<a href="#lightbox9"><img src="images/thumbs/09.jpg" alt="Photo 9"></a>
-				<a href="#lightbox10"><img src="images/thumbs/10.jpg" alt="Photo 10"></a>
-			</section>
+		<section id="photo-section" class="photo-section">
+			<a href="#lightbox1"><img src="images/thumbs/01.jpg" alt="Photo 1"></a>
+			<a href="#lightbox2"><img src="images/thumbs/02.jpg" alt="Photo 2"></a>
+			<a href="#lightbox3"><img src="images/thumbs/03.jpg" alt="Photo 3"></a>
+			<a href="#lightbox4"><img src="images/thumbs/04.jpg" alt="Photo 4"></a>
+			<a href="#lightbox5"><img src="images/thumbs/05.jpg" alt="Photo 5"></a>
+			<a href="#lightbox6"><img src="images/thumbs/06.jpg" alt="Photo 6"></a>
+			<a href="#lightbox7"><img src="images/thumbs/07.jpg" alt="Photo 7"></a>
+			<a href="#lightbox8"><img src="images/thumbs/08.jpg" alt="Photo 8"></a>
+			<a href="#lightbox9"><img src="images/thumbs/09.jpg" alt="Photo 9"></a>
+			<a href="#lightbox10"><img src="images/thumbs/10.jpg" alt="Photo 10"></a>
+		</section>
 
 		<!-- Lightbox -->
-			<div id="lightbox1" class="lightbox">
-			    <a href="#lightbox10" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/01.jpg" alt="Photo 1">
-			    <a href="#lightbox2" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox2" class="lightbox">
-			    <a href="#lightbox1" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/02.jpg" alt="Photo 2">
-			    <a href="#lightbox3" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox3" class="lightbox">
-			    <a href="#lightbox2" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/03.jpg" alt="Photo 3">
-			    <a href="#lightbox4" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox4" class="lightbox">
-			    <a href="#lightbox3" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/04.jpg" alt="Photo 4">
-			    <a href="#lightbox5" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox5" class="lightbox">
-			    <a href="#lightbox4" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/05.jpg" alt="Photo 5">
-			    <a href="#lightbox6" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox6" class="lightbox">
-			    <a href="#lightbox5" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/06.jpg" alt="Photo 6">
-			    <a href="#lightbox7" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox7" class="lightbox">
-			    <a href="#lightbox6" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/07.jpg" alt="Photo 7">
-			    <a href="#lightbox8" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox8" class="lightbox">
-			    <a href="#lightbox7" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/08.jpg" alt="Photo 8">
-			    <a href="#lightbox9" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox9" class="lightbox">
-			    <a href="#lightbox8" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/09.jpg" alt="Photo 9">
-			    <a href="#lightbox10" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			<div id="lightbox10" class="lightbox">
-			    <a href="#lightbox9" class="nav prev">&#10094;</a>
-			    <img src="images/fulls/10.jpg" alt="Photo 10">
-			    <a href="#lightbox1" class="nav next">&#10095;</a>
-			    <a href="#photo-section" class="close">&times;</a>
-			</div>
-			
-
-
-		<!-- Footer -->
-			<footer id="footer">
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Wannes Schodts</li><li>Design thanks to <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<div id="lightbox1" class="lightbox">
+			<a href="#lightbox10" class="nav prev">&#10094;</a>
+			<img src="images/fulls/01.jpg" alt="Photo 1">
+			<a href="#lightbox2" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox2" class="lightbox">
+			<a href="#lightbox1" class="nav prev">&#10094;</a>
+			<img src="images/fulls/02.jpg" alt="Photo 2">
+			<a href="#lightbox3" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox3" class="lightbox">
+			<a href="#lightbox2" class="nav prev">&#10094;</a>
+			<img src="images/fulls/03.jpg" alt="Photo 3">
+			<a href="#lightbox4" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox4" class="lightbox">
+			<a href="#lightbox3" class="nav prev">&#10094;</a>
+			<img src="images/fulls/04.jpg" alt="Photo 4">
+			<a href="#lightbox5" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox5" class="lightbox">
+			<a href="#lightbox4" class="nav prev">&#10094;</a>
+			<img src="images/fulls/05.jpg" alt="Photo 5">
+			<a href="#lightbox6" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox6" class="lightbox">
+			<a href="#lightbox5" class="nav prev">&#10094;</a>
+			<img src="images/fulls/06.jpg" alt="Photo 6">
+			<a href="#lightbox7" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox7" class="lightbox">
+			<a href="#lightbox6" class="nav prev">&#10094;</a>
+			<img src="images/fulls/07.jpg" alt="Photo 7">
+			<a href="#lightbox8" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox8" class="lightbox">
+			<a href="#lightbox7" class="nav prev">&#10094;</a>
+			<img src="images/fulls/08.jpg" alt="Photo 8">
+			<a href="#lightbox9" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox9" class="lightbox">
+			<a href="#lightbox8" class="nav prev">&#10094;</a>
+			<img src="images/fulls/09.jpg" alt="Photo 9">
+			<a href="#lightbox10" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
+		<div id="lightbox10" class="lightbox">
+			<a href="#lightbox9" class="nav prev">&#10094;</a>
+			<img src="images/fulls/10.jpg" alt="Photo 10">
+			<a href="#lightbox1" class="nav next">&#10095;</a>
+			<a href="#photo-section" class="close">&times;</a>
+		</div>
 
 	</body>
 </html>
