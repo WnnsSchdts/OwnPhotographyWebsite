@@ -2089,6 +2089,23 @@ input, select, textarea {
 				background: #f5f6f7;
 			}
 
+		.main.style4 {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		}
+
+			.main.style4 .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.style4.primary {
+				background: #fff;
+			}
+
+			.main.style4.secondary {
+				background: #000;
+			}
+
 		.main.dark {
 			color: #ffffff;
 		}
