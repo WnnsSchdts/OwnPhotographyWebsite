@@ -2370,8 +2370,8 @@ input, select, textarea {
 		
 /* Scrollbar breedte en achtergrond */
 		::-webkit-scrollbar {
-		  width: 12px; /* Breedte van de verticale scrollbar */
-		  height: 12px; /* Hoogte van de horizontale scrollbar */
+		  width: 6px; /* Breedte van de verticale scrollbar */
+		  height: 6px; /* Hoogte van de horizontale scrollbar */
 		}
 		
 		/* Achtergrond van de scrollbar */
@@ -2382,7 +2382,7 @@ input, select, textarea {
 		/* Kleur en stijl van de schuifbalk */
 		::-webkit-scrollbar-thumb {
 		  background: #888;
-		  border-radius: 6px; /* Maakt de randen afgerond */
+		  border-radius: 3px; /* Maakt de randen afgerond */
 		}
 		
 		/* Bij hover */
@@ -2390,7 +2390,7 @@ input, select, textarea {
 		  background: #555;
 		}
 
-/* Opmaak van de subpagina van de series. 
+/* Opmaak van de subpagina van de series. */
 
 		:root {
 			--columns: 3; /* Aantal kolommen */
@@ -2398,10 +2398,10 @@ input, select, textarea {
 		}
 		
 		.photo-section {
-		display: grid;
-		grid-template-columns: repeat(var(--columns), 1fr);
-		gap: var(--gap);
-		padding: 20px;
+			display: grid;
+			grid-template-columns: repeat(var(--columns), 1fr);
+			gap: var(--gap);
+			padding: 20px;
 		}
 
 		
