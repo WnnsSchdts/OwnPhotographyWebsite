@@ -2349,3 +2349,27 @@ input, select, textarea {
 			}
 
 		}
+
+		
+		/* Scrollbar breedte en achtergrond */
+		::-webkit-scrollbar {
+		  width: 12px; /* Breedte van de verticale scrollbar */
+		  height: 12px; /* Hoogte van de horizontale scrollbar */
+		}
+		
+		/* Achtergrond van de scrollbar */
+		::-webkit-scrollbar-track {
+		  background: #f1f1f1;
+		}
+		
+		/* Kleur en stijl van de schuifbalk */
+		::-webkit-scrollbar-thumb {
+		  background: #888;
+		  border-radius: 6px; /* Maakt de randen afgerond */
+		}
+		
+		/* Bij hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: #555;
+		}
+
