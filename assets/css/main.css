@@ -434,7 +434,7 @@ input, select, textarea {
 			transform-origin: 50% 50%;
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Josefin Sans', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -500,7 +500,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: "Source Sans Pro", "sans-serif";
+		font-family: 'Josefin Sans', sans-serif;
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
@@ -970,7 +970,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Josefin Sans', sans-serif;
 			font-weight: 400;
 		}
 
@@ -987,7 +987,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'Josefin Sans', sans-serif;
 		}
 
 /* Image */
@@ -1296,7 +1296,7 @@ input, select, textarea {
 				animation: spinner-rotate 0.75s infinite linear !important;
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Josefin Sans', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2089,6 +2089,23 @@ input, select, textarea {
 				background: #f5f6f7;
 			}
 
+		.main.style4 {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		}
+
+			.main.style4 .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.style4.primary {
+				background: #fff;
+			}
+
+			.main.style4.secondary {
+				background: #000;
+			}
+
 		.main.dark {
 			color: #ffffff;
 		}
@@ -2349,3 +2366,122 @@ input, select, textarea {
 			}
 
 		}
+
+		
+/* Scrollbar breedte en achtergrond */
+		::-webkit-scrollbar {
+		  width: 6px; /* Breedte van de verticale scrollbar */
+		  height: 6px; /* Hoogte van de horizontale scrollbar */
+		}
+		
+		/* Achtergrond van de scrollbar */
+		::-webkit-scrollbar-track {
+		  background: #f1f1f1;
+		}
+		
+		/* Kleur en stijl van de schuifbalk */
+		::-webkit-scrollbar-thumb {
+		  background: #888;
+		  border-radius: 3px; /* Maakt de randen afgerond */
+		}
+		
+		/* Bij hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: #555;
+		}
+
+/* Opmaak van de subpagina van de series. */
+
+		:root {
+			--columns: 3; /* Aantal kolommen */
+			--gap: 40px;  /* Ruimte tussen de kolommen */
+		}
+		
+		.photo-section {
+			display: grid;
+			grid-template-columns: repeat(var(--columns), 1fr);
+			gap: var(--gap);
+			padding: 20px;
+		}
+
+		
+		.photo-section a {
+		    display: flex;
+		    justify-content: center;
+		    align-items: flex-start;
+		    background-color: #000;
+		    padding: 20px;
+		    box-sizing: border-box;
+		    cursor: pointer;
+		    transition: transform 0.3s ease;
+		}
+		
+		.photo-section a img {
+		    border: 2px solid #fff;
+		    width: auto;
+		    max-width: 100%;
+		    height: auto;
+		    max-height: 100%;
+		    object-fit: contain;
+		    display: block;
+		}
+		
+		.photo-section a:hover {
+		    transform: scale(1.05);
+		}
+		
+		.lightbox {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(0, 0, 0, 0.9);
+		    display: none;
+		    justify-content: center;
+		    align-items: center;
+		    z-index: 1000;
+		}
+		
+		.lightbox img {
+		    max-width: 90%;
+		    max-height: 90%;
+		}
+		
+		.lightbox:target {
+		    display: flex;
+		}
+		
+		.lightbox .close {
+		    position: absolute;
+		    top: 20px;
+		    right: 20px;
+		    color: #fff;
+		    font-size: 30px;
+		    text-decoration: none;
+		    font-weight: bold;
+		}
+		
+		.lightbox .nav {
+		    position: absolute;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    color: #fff;
+		    font-size: 50px;
+		    text-decoration: none;
+		    font-weight: bold;
+		    padding: 10px;
+		    background: rgba(0, 0, 0, 0.5);
+		    border-radius: 5px;
+		    cursor: pointer;
+		}
+		
+		.lightbox .nav.prev {
+		    left: 20px;
+		}
+		
+		.lightbox .nav.next {
+		    right: 20px;
+		}
+
+
