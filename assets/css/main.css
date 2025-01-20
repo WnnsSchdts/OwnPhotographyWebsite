@@ -2325,6 +2325,16 @@ input, select, textarea {
 		background-position: top left, center center;
 	}
 
+/* Blank */
+
+	#blank {
+		background: url("images/overlay.png"), url("../../images/Layout/fulls/one.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+
 /* Contact */
 
 	#contact {
