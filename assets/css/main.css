@@ -2421,7 +2421,7 @@ input, select, textarea {
 
 		
 		.photo-section {
-			display: grid;
+			display: grid !important;
 			grid-template-columns: repeat(var(--columns), 1fr);
 			gap: var(--gap);
 			padding: 20px;
@@ -2454,7 +2454,7 @@ input, select, textarea {
 		}
 		
 		.lightbox {
-		    position: fixed;
+		    position: fixed !important;
 		    top: 0;
 		    left: 0;
 		    width: 100%;
