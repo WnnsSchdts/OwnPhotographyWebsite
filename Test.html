@@ -8,22 +8,51 @@
   <style>
     :root {
       --columns: 3; /* Pas dit aan voor het aantal kolommen */
-      --gap: 40px; /* Ruimte tussen de kolommen, verdubbeld */
+      --gap: 40px; /* Ruimte tussen de kolommen */
     }
 
-    /* Begin algemene stijlen */
+    /* Algemene stijl */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Josefin Sans', sans-serif;
       background-color: #000;
       color: #fff;
     }
 
-    /* Begin nieuwe section - Kan naar CSS bestand */
+    /* Header-balk bovenaan */
+    .header-bar {
+      background-color: #fff; /* Witte achtergrond */
+      color: #000; /* Zwarte tekst */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em; /* Ruimte rondom */
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+    }
+
+    .header-bar .title {
+      font-size: 1.5em;
+      font-weight: bold; /* Vetgedrukt */
+      margin: 0;
+    }
+
+    .header-bar .nav-link {
+      color: #000; /* Zwarte tekst */
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: normal; /* Niet vetgedrukt */
+      transition: color 0.3s ease;
+    }
+
+    .header-bar .nav-link:hover {
+      color: #FFADAD; /* Zalmroze bij hover */
+    }
+
+    /* Introductie-sectie */
     .intro-section {
       background-color: #000; /* Zwarte achtergrond */
       color: #FFADAD; /* Zalmroze tekst */
-      font-family: 'Josefin Sans', sans-serif; /* Josefin Sans lettertype */
+      font-family: 'Josefin Sans', sans-serif;
       padding: 2em;
       display: flex;
       justify-content: space-between;
@@ -47,25 +76,7 @@
       margin: 0;
     }
 
-    .intro-section .home-button {
-      color: #fff; /* Witte knoptekst */
-      text-decoration: none;
-      font-size: 1.2em;
-      font-family: 'Josefin Sans', sans-serif;
-      background: none;
-      border: 1px solid #fff; /* Witte knoprand */
-      padding: 0.5em 1em;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .intro-section .home-button:hover {
-      background-color: #FFADAD; /* Zalmroze achtergrond bij hover */
-      color: #000; /* Zwarte tekst bij hover */
-    }
-    /* Einde nieuwe section */
-
-    /* Begin photo-section */
+    /* Photo-section stijl */
     .photo-section {
       display: grid;
       grid-template-columns: repeat(var(--columns), 1fr);
@@ -76,9 +87,9 @@
     .photo-section a {
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* Zorg dat de foto bovenaan wordt uitgelijnd */
+      align-items: flex-start;
       background-color: #000; /* Zwarte achtergrond als vulruimte */
-      padding: 20px; /* Verdubbelde ruimte rond de foto */
+      padding: 20px;
       box-sizing: border-box;
       cursor: pointer;
       transition: transform 0.3s ease;
@@ -156,9 +167,14 @@
 </head>
 <body>
 
-<!-- Nieuwe Section -->
+<!-- Header Balk -->
+<header class="header-bar">
+  <div class="title">Wannes Schodts Photography</div>
+  <a href="index.html" class="nav-link">Home</a>
+</header>
+
+<!-- Introductie-sectie -->
 <section class="intro-section">
-  <a href="index.html" class="home-button">Home</a>
   <div class="text-container">
     <h1>Welcome to My Portfolio</h1>
     <p>
@@ -170,17 +186,11 @@
 
 <!-- Photo Section -->
 <section class="photo-section">
-  <!-- Foto's toevoegen -->
   <a href="#lightbox1"><img src="images/Preview/thumbs/01.jpg" alt="Photo 1"></a>
   <a href="#lightbox2"><img src="images/Preview/thumbs/02.jpg" alt="Photo 2"></a>
   <a href="#lightbox3"><img src="images/Preview/thumbs/03.jpg" alt="Photo 3"></a>
   <a href="#lightbox4"><img src="images/Preview/thumbs/04.jpg" alt="Photo 4"></a>
   <a href="#lightbox5"><img src="images/Preview/thumbs/05.jpg" alt="Photo 5"></a>
-  <a href="#lightbox6"><img src="images/Preview/thumbs/06.jpg" alt="Photo 6"></a>
-  <a href="#lightbox7"><img src="images/Preview/thumbs/07.jpg" alt="Photo 7"></a>
-  <a href="#lightbox8"><img src="images/Preview/thumbs/08.jpg" alt="Photo 8"></a>
-  <a href="#lightbox9"><img src="images/Preview/thumbs/09.jpg" alt="Photo 9"></a>
-  <a href="#lightbox10"><img src="images/Preview/thumbs/10.jpg" alt="Photo 10"></a>
 </section>
 
 <!-- Lichtbox voor vergroting -->
