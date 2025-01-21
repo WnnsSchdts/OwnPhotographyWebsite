@@ -2420,15 +2420,15 @@ input, select, textarea {
 /* Opmaak van de subpagina van de series. */
 
 		
-		.photo-section {
-			display: grid !important;
-			grid-template-columns: repeat(var(--columns), 1fr);
-			gap: var(--gap);
-			padding: 20px;
+		/* Photo Section */
+		section.photo-section {
+		    display: grid !important;
+		    grid-template-columns: repeat(var(--columns), 1fr);
+		    gap: var(--gap);
+		    padding: 20px;
 		}
-
 		
-		.photo-section a {
+		section.photo-section a {
 		    display: flex;
 		    justify-content: center;
 		    align-items: flex-start;
@@ -2439,7 +2439,7 @@ input, select, textarea {
 		    transition: transform 0.3s ease;
 		}
 		
-		.photo-section a img {
+		section.photo-section a img {
 		    border: 2px solid #fff;
 		    width: auto;
 		    max-width: 100%;
@@ -2449,11 +2449,12 @@ input, select, textarea {
 		    display: block;
 		}
 		
-		.photo-section a:hover {
+		section.photo-section a:hover {
 		    transform: scale(1.05);
 		}
 		
-		.lightbox {
+		/* Lightbox */
+		div.lightbox {
 		    position: fixed !important;
 		    top: 0;
 		    left: 0;
@@ -2466,16 +2467,16 @@ input, select, textarea {
 		    z-index: 1000;
 		}
 		
-		.lightbox img {
+		div.lightbox img {
 		    max-width: 90%;
 		    max-height: 90%;
 		}
 		
-		.lightbox:target {
+		div.lightbox:target {
 		    display: flex;
 		}
 		
-		.lightbox .close {
+		div.lightbox .close {
 		    position: absolute;
 		    top: 20px;
 		    right: 20px;
@@ -2485,7 +2486,7 @@ input, select, textarea {
 		    font-weight: bold;
 		}
 		
-		.lightbox .nav {
+		div.lightbox .nav {
 		    position: absolute;
 		    top: 50%;
 		    transform: translateY(-50%);
@@ -2499,12 +2500,13 @@ input, select, textarea {
 		    cursor: pointer;
 		}
 		
-		.lightbox .nav.prev {
+		div.lightbox .nav.prev {
 		    left: 20px;
 		}
 		
-		.lightbox .nav.next {
+		div.lightbox .nav.next {
 		    right: 20px;
 		}
+
 
 
