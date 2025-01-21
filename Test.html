@@ -8,8 +8,23 @@
   <style>
     :root {
       --columns: 3; /* Pas dit aan voor het aantal kolommen */
-      --gap: 40px; /* Ruimte tussen de kolommen */
-    }
+        gap: calc(2% + 0.5vw); /* Dynamische ruimte */
+        padding: 20px;
+      }
+      
+      /* Voor kleinere schermen */
+      @media (max-width: 768px) {
+        .photo-section {
+          gap: calc(1% + 0.2vw); /* Minder ruimte tussen foto's op kleinere schermen */
+        }
+      }
+      
+      /* Voor zeer kleine schermen, zoals smartphones */
+      @media (max-width: 480px) {
+        .photo-section {
+          gap: 1%; /* Compactere ruimte tussen foto's */
+        }
+      }
 
     /* Algemene stijl */
     body {
