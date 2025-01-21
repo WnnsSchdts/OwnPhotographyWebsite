@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --columns: 3; /* Pas dit aan voor het aantal kolommen */
-      --gap: 40px; /* Ruimte tussen de kolommen, verdubbeld */
-    }  
+      --columns: 3; /* Aantal kolommen */
+      --gap: 40px; /* Ruimte tussen kolommen */
+    }
 
     /* Algemene stijl */
     body {
@@ -21,26 +21,26 @@
 
     /* Header-balk bovenaan */
     .header-bar {
-      background-color: #fff; /* Witte achtergrond */
-      color: #000; /* Zwarte tekst */
+      background-color: #fff;
+      color: #000;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1em 2em; /* Ruimte rondom */
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+      padding: 1em 2em;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .header-bar .title {
-      font-size: 1.5em;
-      font-weight: bold; /* Vetgedrukt */
+      font-size: 1.2em; /* Kleinere tekstgrootte */
+      font-weight: bold;
       margin: 0;
     }
 
     .header-bar .nav-link {
-      color: #000; /* Zwarte tekst */
+      color: #000;
       text-decoration: none;
-      font-size: 1em;
-      font-weight: normal; /* Niet vetgedrukt */
+      font-size: 0.9em; /* Kleinere tekstgrootte */
+      font-weight: normal;
       transition: color 0.3s ease;
     }
 
@@ -50,65 +50,69 @@
 
     /* Introductie-sectie */
     .intro-section {
-      background-color: #000; /* Zwarte achtergrond */
-      color: #FFADAD; /* Zalmroze tekst */
-      font-family: 'Josefin Sans', sans-serif;
+      background-color: #000;
+      color: #FFADAD;
       padding: 2em;
       display: flex;
-      justify-content: flex-end; /* Plaatst de tekst rechts */
-      align-items: center; /* Centreert de tekst verticaal */
+      justify-content: flex-end;
+      align-items: center;
     }
 
     .intro-section .text-container {
       text-align: right;
-      max-width: 50%; /* Tekstbreedte beperken */
+      max-width: 50%; /* Maximaal 50% breedte op grote schermen */
     }
 
     .intro-section h1 {
-      font-size: 3em;
+      font-size: 2em; /* Kleinere titel */
       margin: 0 0 0.5em 0;
-      color: #FFADAD; /* Zalmroze titel */
+      color: #FFADAD;
     }
 
     .intro-section p {
-      font-size: 1.2em;
+      font-size: 1em; /* Kleinere tekstgrootte */
       line-height: 1.5;
       margin: 0;
+    }
+
+    /* Responsieve aanpassingen */
+    @media (max-width: 768px) {
+      .intro-section {
+        justify-content: center; /* Centreer tekst op kleinere schermen */
+      }
+
+      .intro-section .text-container {
+        max-width: 100%; /* Volledige breedte */
+        text-align: center; /* Tekst centreren */
+      }
     }
 
     /* Photo-section stijl */
     .photo-section {
       display: grid;
       grid-template-columns: repeat(var(--columns), 1fr);
-      gap: calc(2% + 0.5vw); /* Dynamische ruimte */
+      gap: calc(2% + 0.5vw);
       padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .photo-section {
+        grid-template-columns: 1fr; /* Eén kolom voor kleinere schermen */
+        gap: calc(1% + 0.2vw);
       }
-      
-      /* Voor kleinere schermen */
-      @media (max-width: 768px) {
-        .photo-section {
-          gap: calc(1% + 0.2vw); /* Minder ruimte tussen foto's op kleinere schermen */
-        }
-      }
-      
-      /* Voor zeer kleine schermen, zoals smartphones */
-      @media (max-width: 480px) {
-        .photo-section {
-          gap: 1%; /* Compactere ruimte tussen foto's */
-        }
-      }
-    
+    }
+
     .photo-section a {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       background-color: #000;
-      padding: 20px;
+      padding: 15px;
       box-sizing: border-box;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-    
+
     .photo-section a img {
       border: 2px solid #fff;
       width: auto;
@@ -118,24 +122,10 @@
       object-fit: contain;
       display: block;
     }
-    
+
     .photo-section a:hover {
       transform: scale(1.05);
     }
-    
-    /* Responsieve indeling */
-    @media (max-width: 768px) {
-      .photo-section {
-        grid-template-columns: 1fr; /* Eén kolom, foto's onder elkaar */
-        gap: 20px;
-      }
-    
-      .photo-section a img {
-        width: 100%; /* Vul de hele breedte van de container */
-        height: auto;
-      }
-    }
-
 
     /* Lichtbox-stijl */
     .lightbox {
@@ -157,7 +147,7 @@
     }
 
     .lightbox:target {
-      display: flex; /* Toon de lichtbox wanneer de target actief is */
+      display: flex;
     }
 
     .lightbox .close {
@@ -191,29 +181,6 @@
     .lightbox .nav.next {
       right: 20px;
     }
-
-    /* Scrollbar breedte en achtergrond */
-		::-webkit-scrollbar {
-		  width: 6px; /* Breedte van de verticale scrollbar */
-		  height: 6px; /* Hoogte van de horizontale scrollbar */
-		}
-		
-		/* Achtergrond van de scrollbar */
-		::-webkit-scrollbar-track {
-		  background: #f1f1f1;
-		}
-		
-		/* Kleur en stijl van de schuifbalk */
-		::-webkit-scrollbar-thumb {
-		  background: #888;
-		  border-radius: 3px; /* Maakt de randen afgerond */
-		}
-		
-		/* Bij hover */
-		::-webkit-scrollbar-thumb:hover {
-		  background: #555;
-		}
-    
   </style>
 </head>
 <body>
