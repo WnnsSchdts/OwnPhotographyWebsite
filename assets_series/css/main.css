@@ -26,13 +26,14 @@ body {
 .header-bar .nav-link {
   color: #000;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 1.1em; /* Vergroot de tekstgrootte */
   font-weight: normal;
+  padding: 0.5em 1em; /* Meer ruimte rondom de tekst */
   transition: color 0.3s ease;
 }
 
 .header-bar .nav-link:hover {
-  color: #FFADAD;
+  color: #FFADAD; /* Zalmroze bij hover */
 }
 
 /* Introductie-sectie */
