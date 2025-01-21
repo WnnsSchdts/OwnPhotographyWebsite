@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --columns: 3; /* Pas dit aan voor het aantal kolommen */
       --gap: 40px; /* Ruimte tussen de kolommen, verdubbeld */
     }
 
+    /* Begin algemene stijlen */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -17,6 +19,53 @@
       color: #fff;
     }
 
+    /* Begin nieuwe section - Kan naar CSS bestand */
+    .intro-section {
+      background-color: #000; /* Zwarte achtergrond */
+      color: #FFADAD; /* Zalmroze tekst */
+      font-family: 'Josefin Sans', sans-serif; /* Josefin Sans lettertype */
+      padding: 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .intro-section .text-container {
+      text-align: right;
+      max-width: 50%; /* Tekstbreedte beperken */
+    }
+
+    .intro-section h1 {
+      font-size: 3em;
+      margin: 0 0 0.5em 0;
+      color: #FFADAD; /* Zalmroze titel */
+    }
+
+    .intro-section p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .intro-section .home-button {
+      color: #fff; /* Witte knoptekst */
+      text-decoration: none;
+      font-size: 1.2em;
+      font-family: 'Josefin Sans', sans-serif;
+      background: none;
+      border: 1px solid #fff; /* Witte knoprand */
+      padding: 0.5em 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .intro-section .home-button:hover {
+      background-color: #FFADAD; /* Zalmroze achtergrond bij hover */
+      color: #000; /* Zwarte tekst bij hover */
+    }
+    /* Einde nieuwe section */
+
+    /* Begin photo-section */
     .photo-section {
       display: grid;
       grid-template-columns: repeat(var(--columns), 1fr);
@@ -107,6 +156,19 @@
 </head>
 <body>
 
+<!-- Nieuwe Section -->
+<section class="intro-section">
+  <a href="index.html" class="home-button">Home</a>
+  <div class="text-container">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+      Explore my photography showcasing the beauty of humanity and nature. 
+      Each photo captures a unique moment with passion and creativity.
+    </p>
+  </div>
+</section>
+
+<!-- Photo Section -->
 <section class="photo-section">
   <!-- Foto's toevoegen -->
   <a href="#lightbox1"><img src="images/Preview/thumbs/01.jpg" alt="Photo 1"></a>
@@ -180,3 +242,6 @@
   <a href="#" class="close">&times;</a>
   <a href="#lightbox9" class="nav prev">&#10094;</a>
   <img src="images/Preview/fulls/10
+
+</body>
+</html>
