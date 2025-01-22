@@ -179,7 +179,7 @@ body {
 body.home {
   margin: 0;
   padding: 0;
-  background: url('images/background.jpg') no-repeat center center fixed;
+  background: url('images/Layout/fulls/intro.jpg') no-repeat center center fixed;
   background-size: cover; /* Schaal de afbeelding om het scherm te vullen */
   height: 100vh;
   overflow: hidden; /* Verberg scrollbars */
@@ -225,6 +225,67 @@ body.home {
 
   .text-overlay .text-container {
     text-align: center; /* Tekst centreren op kleine schermen */
+  }
+}
+
+body.about-page {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+}
+
+.split-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2em; /* Ruimte tussen de rijen */
+  padding: 2em;
+}
+
+.split-layout .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em; /* Ruimte tussen tekst en afbeelding */
+}
+
+.text-block {
+  flex: 1; /* Tekstvakken nemen gelijke ruimte in */
+  color: #FFADAD; /* Zalmroze tekst */
+  text-align: left; /* Links uitgelijnd */
+}
+
+.text-block h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.text-block p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.image-block {
+  flex: 1; /* Afbeeldingen nemen gelijke ruimte in */
+  display: flex;
+  justify-content: center; /* Center de afbeeldingen horizontaal */
+}
+
+.image-block img {
+  max-width: 100%; /* Zorg dat de afbeelding binnen het blok past */
+  height: auto;
+  object-fit: contain; /* Houd de afbeelding proportioneel */
+}
+
+@media (max-width: 768px) {
+  .split-layout .row {
+    flex-direction: column; /* Schakel over naar een verticale indeling */
+    align-items: flex-start; /* Zet items links uitgelijnd */
+  }
+
+  .image-block {
+    margin-top: 1em; /* Ruimte boven de afbeelding */
   }
 }
 
