@@ -41,7 +41,7 @@
 body.home {
   margin: 0;
   padding: 0;
-  background: url('images/Layout/fulls/intro.jpg') no-repeat center center fixed;
+  background: url('/images/Layout/fulls/intro.jpg') no-repeat center center fixed;
   background-size: cover; /* Schaal de afbeelding om het scherm te vullen */
   height: 100vh;
   overflow: hidden; /* Verberg scrollbars */
@@ -54,7 +54,7 @@ body.home {
   bottom: 5%; /* Plaatst het tekstvak iets boven de onderkant */
   right: 5%; /* Plaatst het tekstvak rechts */
   width: 25%; /* Standaard grootte is een vierde van de body */
-  background-color: rgba(0, 0, 0, 0.6); /* Zwarte achtergrond met transparantie */
+  background-color: transparent; /* Geen achtergrondkleur */
   color: #FFADAD; /* Zalmroze tekst */
   padding: 1.5em;
   box-sizing: border-box;
