@@ -175,3 +175,56 @@ body {
     height: auto;
   }
 }
+
+body.home {
+  margin: 0;
+  padding: 0;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover; /* Schaal de afbeelding om het scherm te vullen */
+  height: 100vh;
+  overflow: hidden; /* Verberg scrollbars */
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 5%; /* Plaatst het tekstvak iets boven de onderkant */
+  right: 5%; /* Plaatst het tekstvak rechts */
+  width: 25%; /* Standaard grootte is een vierde van de body */
+  background-color: rgba(0, 0, 0, 0.6); /* Zwarte achtergrond met transparantie */
+  color: #FFADAD; /* Zalmroze tekst */
+  padding: 1.5em;
+  box-sizing: border-box;
+}
+
+.text-overlay .text-container {
+  text-align: right;
+}
+
+.text-overlay h1 {
+  font-size: 1.8em; /* Kleinere titel */
+  margin: 0 0 0.5em 0;
+}
+
+.text-overlay p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    width: 100%; /* Tekstvak neemt volledige breedte in */
+    height: 100%; /* Tekstvak vult het scherm */
+    bottom: 0;
+    right: 0;
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.8); /* Iets donkerdere achtergrond op kleine schermen */
+  }
+
+  .text-overlay .text-container {
+    text-align: center; /* Tekst centreren op kleine schermen */
+  }
+}
+
