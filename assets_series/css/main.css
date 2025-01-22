@@ -41,10 +41,10 @@
 body.home {
   margin: 0;
   padding: 0;
-  background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
-  background-size: cover; /* Schaal de afbeelding om het scherm te vullen */
-  height: 100vh;
-  overflow: hidden; /* Verberg scrollbars */
+  background: url("images/Layout/fulls/intro.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed; /* Zorg dat de afbeelding blijft staan bij scrollen */
+  overflow: hidden; /* Voorkomt scrollbars */
   font-family: 'Josefin Sans', sans-serif;
   color: #fff;
 }
