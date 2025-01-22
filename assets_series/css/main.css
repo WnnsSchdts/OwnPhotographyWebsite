@@ -360,7 +360,7 @@ body.my-work-page {
 }
 
 .text-block .links li a {
-  color: #ffffb3; /* Geel standaardkleur */
+  color: #EEEE9B; /* Geel standaardkleur */
   text-decoration: none;
   font-size: 1em;
   transition: color 0.3s ease;
