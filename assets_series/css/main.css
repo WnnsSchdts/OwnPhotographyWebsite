@@ -360,14 +360,14 @@ body.my-work-page {
 }
 
 .text-block .links li a {
-  color: #FFADAD; /* Zalmroze standaardkleur */
+  color: #ffff99; /* Geel standaardkleur */
   text-decoration: none;
   font-size: 1em;
   transition: color 0.3s ease;
 }
 
 .text-block .links li a:hover {
-  color: #000; /* Zwarte tekst bij hover */
+  color: #FFADAD; /* Zalmroze tekst bij hover */
 }
 
 .images {
@@ -377,7 +377,7 @@ body.my-work-page {
 }
 
 .images img {
-  max-width: 100%; /* Vul de breedte van het scherm */
+  max-width: 50%; /* Vul de breedte van het scherm */
   height: auto;
   object-fit: contain; /* Zorg dat de afbeelding proportioneel blijft */
 }
