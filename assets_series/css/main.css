@@ -166,51 +166,13 @@ body.about-me-page {
 /* ----------------------------------------------------------*/
 
 /* --------------------- Algemene stijl --------------------- */
-body {
+body.a-little-preview-page {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   background-color: #000;
   color: #fff;
 }
 
-/* --------------------- Introductie-sectie --------------------- */
-.intro-section {
-  background-color: #000;
-  color: #FFADAD;
-  padding: 2em;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.intro-section .text-container {
-  text-align: right;
-  max-width: 50%;
-}
-
-.intro-section h1 {
-  font-size: 2em;
-  margin: 0 0 0.5em 0;
-  color: #FFADAD;
-}
-
-.intro-section p {
-  font-size: 1em;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* --------------------- Responsieve aanpassingen --------------------- */
-@media (max-width: 768px) {
-  .intro-section {
-    justify-content: center;
-  }
-
-  .intro-section .text-container {
-    max-width: 100%;
-    text-align: center;
-  }
-}
 
 /* --------------------- Photo-section stijl --------------------- */
 .photo-section {
