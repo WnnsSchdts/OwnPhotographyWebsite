@@ -404,7 +404,7 @@ body.my-work-page {
 }
 
 .images-work img {
-  width: 100%;
+  width: 80%;
   max-height: calc(100vh - 4rem); /* Hoogte van de browser min 4rem ruimte (boven en onder samen) */
   object-fit: contain; /* Houd de afbeelding binnen de grenzen zonder deze te vullen */
   display: block;
