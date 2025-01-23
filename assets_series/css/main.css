@@ -174,28 +174,45 @@ body.about-me-page {
   display: block;
 }
 
+/* --------------------- Media query voor kleinere schermen --------------------- */
 
 @media (max-width: 768px) {
-   .split-layout {
+  .split-layout {
     display: flex;
-    flex-direction: column; /* Schakel over naar een verticale indeling */
+    flex-direction: column; /* Zorg voor een verticale indeling */
+    gap: 1.5em; /* Ruimte tussen de items */
   }
 
   .text-block {
-    order: 0;
+    max-width: 100%; /* Tekstvak neemt de volledige breedte in */
   }
 
   .image-grid {
-    grid-template-columns: 1fr; /* Maak de afbeeldingenset een enkele kolom */
-    order: 1; /* Zorg dat afbeeldingen onder tekst vallen */
+    width: 100%; /* Laat de afbeeldingen de volledige breedte innemen */
+    display: block; /* Zet de afbeeldingen naast elkaar in een blok */
   }
 
-  .row:nth-child(even) .image-grid {
-    order: 0; /* Wissel volgorde voor even rijen */
+  .image-grid img {
+    width: 100%; /* Zorg dat de afbeeldingen de volledige breedte innemen */
+    height: auto; /* Zorg ervoor dat de afbeeldingen hun aspect ratio behouden */
+    margin-top: 1em; /* Voeg wat ruimte boven de afbeeldingen toe */
   }
 
-  .row:nth-child(even) .text-block {
-    order: 1;
+  /* Wissel volgorde van tekst en afbeeldingen voor kleinere schermen */
+  .split-layout .row:nth-child(even) .image-grid {
+    order: -1; /* Zet afbeeldingen boven de tekst bij even rijen */
+  }
+
+  .split-layout .row:nth-child(even) .text-block {
+    order: 1; /* Zet de tekst onder de afbeeldingen bij even rijen */
+  }
+
+  .split-layout .row:nth-child(odd) .image-grid {
+    order: 1; /* Laat afbeeldingen onder de tekst in oneven rijen */
+  }
+
+  .split-layout .row:nth-child(odd) .text-block {
+    order: -1; /* Zet de tekst boven de afbeeldingen bij oneven rijen */
   }
 }
 
@@ -583,13 +600,13 @@ body.my-stories-page {
 /* --------------------- Responsieve ruimte --------------------- */
 @media (max-width: 768px) {
   .photo-section {
-    grid-template-columns: 1fr;
-    gap: calc(1% + 0.2vw);
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen */
   }
+}
 
-  .photo-section a img {
-    width: 100%;
-    height: auto;
+@media (max-width: 480px) {
+  .photo-section {
+    grid-template-columns: 1fr; /* 1 kolom */
   }
 }
 
