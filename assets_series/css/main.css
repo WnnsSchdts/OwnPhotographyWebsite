@@ -32,6 +32,48 @@
   color: #FFADAD; /* Zalmroze bij hover */
 }
 
+/* --------------------- Verberg de normale knoppen en toon de menu knop op kleinere schermen --------------------- */
+@media (max-width: 768px) {
+  .header-bar .nav-links {
+    display: none; /* Verberg de knoppen op kleinere schermen */
+  }
+  
+  .header-bar .menu-button {
+    display: block; /* Toon de menu knop */
+    color: #000; 
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .header-bar .menu-button:hover {
+    background-color: #FFADAD; /* Iets donkerder bij hover */
+  }
+
+  /* --------------------- Dropdownmenu, standaard verborgen --------------------- */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Zet het dropdownmenu onder de header */
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .dropdown-menu .nav-link {
+    padding: 1em;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-menu .nav-link:hover {
+    background-color: #f1f1f1;
+  }
+}
 
 
 /* ----------------------------------------------------------*/
