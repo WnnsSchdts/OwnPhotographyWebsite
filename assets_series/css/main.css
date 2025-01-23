@@ -79,17 +79,20 @@ body.home {
 
 @media (max-width: 768px) {
   .text-overlay {
+    position: fixed; /* Zet het tekstvak vast aan de onderkant van het scherm */
     width: 100%; /* Tekstvak neemt volledige breedte in */
-    height: 100%; /* Tekstvak vult het scherm */
+    height: auto; /* Laat het tekstvak niet het hele scherm vullen */
     bottom: 0;
     right: 0;
     padding: 2em;
     background-color: rgba(0, 0, 0, 0.8); /* Iets donkerdere achtergrond op kleine schermen */
+    text-align: right; /* Zorgt ervoor dat de tekst rechts wordt uitgelijnd */
   }
 
   .text-overlay .text-container {
     text-align: right; /* Tekst centreren op kleine schermen */
   }
+  
 }
 
 /* ----------------------------------------------------------*/
