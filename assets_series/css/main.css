@@ -400,7 +400,7 @@ body.my-work-page {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Twee kolommen binnen de afbeeldingen-grid */
   gap: 1em;
-  align-items: stretch; /* Zorg dat de afbeeldingen de hoogte van het tekstvak volgen */
+  /*align-items: stretch; /* Zorg dat de afbeeldingen de hoogte van het tekstvak volgen */
 }
 
 .images-work img {
