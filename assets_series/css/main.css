@@ -405,9 +405,10 @@ body.my-work-page {
 
 .images-work img {
   width: 100%;
-  height: 100vh; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
-  object-fit: contain; /* Vul de ruimte proportioneel zonder witte balken */
+  max-height: calc(100vh - 4rem); /* Hoogte van de browser min 4rem ruimte (boven en onder samen) */
+  object-fit: contain; /* Houd de afbeelding binnen de grenzen zonder deze te vullen */
   display: block;
+  margin: 2rem 0; /* Voeg ruimte boven en onder toe aan de afbeeldingen */
 }
 
 @media (max-width: 768px) {
