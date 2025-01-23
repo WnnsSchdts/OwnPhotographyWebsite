@@ -435,7 +435,7 @@ body.my-stories-page {
 .photo-section a {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center; /* Verander 'flex-start' naar 'center' */
   background-color: #000;
   padding: 15px;
   box-sizing: border-box;
