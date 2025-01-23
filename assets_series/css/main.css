@@ -42,11 +42,11 @@ body.home {
   margin: 0;
   padding: 0;
 background: none; 
-  background: url("images/Layout/fulls/one.jpg") !important;
+  background-image: url("images/Layout/fulls/one.jpg");
   background-size: cover;
   background-attachment: fixed; /* Zorg dat de afbeelding blijft staan bij scrollen */
-  background-position: bottom center;
-background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden; /* Voorkomt scrollbars */
   font-family: 'Josefin Sans', sans-serif;
 }
