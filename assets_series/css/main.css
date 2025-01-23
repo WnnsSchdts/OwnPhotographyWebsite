@@ -460,11 +460,10 @@ body.my-stories-page {
   padding-top: 100%; /* Zorg dat de hoogte gelijk is aan de breedte (vierkant) */
   background-color: #000; /* Achtergrondkleur voor lege ruimte */
   overflow: hidden; /* Verberg overlopen */
-  display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease;
+  border: 2px solid #fff;
 }
 
 /*.photo-section a img {
@@ -478,10 +477,14 @@ body.my-stories-page {
 }*/
 
 .photo-section a img {
-  max-width: 100%; /* Breedte aanpassen aan container */
-  max-height: 100%; /* Hoogte aanpassen aan container */
-  object-fit: contain; /* Zorg dat de afbeelding proportioneel blijft */
-  display: block; /* Verwijder inline spacing */
+  position: absolute; /* Noodzakelijk voor positionering binnen de container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centreer afbeelding in de container */
+  max-width: 100%; /* Maximaal binnen de containerbreedte */
+  max-height: 100%; /* Maximaal binnen de containerhoogte */
+  object-fit: contain; /* Houd originele verhoudingen */
+  display: block; /* Voorkom inline spacing problemen */
 }
 
 .photo-section a:hover {
