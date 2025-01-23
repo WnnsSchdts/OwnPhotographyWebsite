@@ -128,7 +128,7 @@ body.about-me-page {
   color: #fff;
 }
 
-.split-layout {
+.split-layout-about {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 kolommen: tekst - afbeelding kolom 1 - afbeelding kolom 2 */
   grid-auto-rows: auto; /* Pas hoogte van de rijen aan de inhoud aan */
@@ -137,29 +137,29 @@ body.about-me-page {
   align-items: start; /* Zorg dat items worden uitgelijnd aan de bovenkant */
 }
 
-.split-layout .row {
+.split-layout-about .row-about {
   display: contents; /* Zorg ervoor dat alle kinderen van de grid onafhankelijk zijn */
 }
 
-.text-block {
+.text-block-about {
   grid-column: 1; /* Zet de tekst in de eerste kolom */
   max-width: 100%;
   color: #FFADAD;
   text-align: left;
 }
 
-.text-block h1 {
+.text-block-about h1 {
   font-size: 1.8em;
   margin-bottom: 0.5em;
 }
 
-.text-block p {
+.text-block-about p {
   font-size: 1em;
   line-height: 1.5;
   margin-bottom: 1em;
 }
 
-.image-grid {
+.image-grid-about {
   grid-column: 2 / span 2; /* Laat de afbeeldingen de tweede en derde kolom vullen */
   display: grid;
   grid-template-columns: 1fr 1fr; /* Twee kolommen binnen de afbeeldingen-grid */
@@ -167,7 +167,7 @@ body.about-me-page {
   align-items: stretch; /* Zorg dat de afbeeldingen de hoogte van het tekstvak volgen */
 }
 
-.image-grid img {
+.image-grid-about img {
   width: 100%;
   height: 100%; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
   object-fit: cover; /* Vul de ruimte proportioneel zonder witte balken */
@@ -177,41 +177,42 @@ body.about-me-page {
 /* --------------------- Media query voor kleinere schermen --------------------- */
 
 @media (max-width: 768px) {
-  .split-layout {
+  .split-layout-about {
     display: flex;
     flex-direction: column; /* Zorg voor een verticale indeling */
     gap: 1.5em; /* Ruimte tussen de items */
   }
 
-  .text-block {
+  .text-block-about {
     max-width: 100%; /* Tekstvak neemt de volledige breedte in */
   }
 
-  .image-grid {
+  .image-grid-about {
     width: 100%; /* Laat de afbeeldingen de volledige breedte innemen */
     display: block; /* Zet de afbeeldingen naast elkaar in een blok */
   }
 
-  .image-grid img {
+  .image-grid-about img {
     width: 100%; /* Zorg dat de afbeeldingen de volledige breedte innemen */
     height: auto; /* Zorg ervoor dat de afbeeldingen hun aspect ratio behouden */
     margin-top: 1em; /* Voeg wat ruimte boven de afbeeldingen toe */
   }
 
   /* Wissel volgorde van tekst en afbeeldingen voor kleinere schermen */
-  .split-layout .row:nth-child(even) .image-grid {
+  
+  .split-layout-about .row-about:nth-child(even) .image-grid {
     order: -1; /* Zet afbeeldingen boven de tekst bij even rijen */
   }
 
-  .split-layout .row:nth-child(even) .text-block {
+  .split-layout-about .row-about:nth-child(even) .text-block {
     order: 1; /* Zet de tekst onder de afbeeldingen bij even rijen */
   }
 
-  .split-layout .row:nth-child(odd) .image-grid {
+  .split-layout-about .row-about:nth-child(odd) .image-grid {
     order: 1; /* Laat afbeeldingen onder de tekst in oneven rijen */
   }
 
-  .split-layout .row:nth-child(odd) .text-block {
+  .split-layout-about .row-about:nth-child(odd) .text-block {
     order: -1; /* Zet de tekst boven de afbeeldingen bij oneven rijen */
   }
 }
@@ -342,7 +343,7 @@ body.my-work-page {
   color: #fff;
 }
 
-.split-layout {
+.split-layout-work {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 kolommen: tekst - afbeelding kolom 1 - afbeelding kolom 2 */
   grid-auto-rows: auto; /* Pas hoogte van de rijen aan de inhoud aan */
@@ -351,50 +352,50 @@ body.my-work-page {
   align-items: start; /* Zorg dat items worden uitgelijnd aan de bovenkant */
 }
 
-.split-layout .row {
+.split-layout-work .row-work {
   display: contents; /* Zorg ervoor dat alle kinderen van de grid onafhankelijk zijn */
 }
 
-.text-block {
+.text-block-work {
   grid-column: 1; /* Zet de tekst in de eerste kolom */
   max-width: 100%; 
   color: #FFADAD; /* Zalmroze tekst */
   text-align: left;
 }
 
-.text-block h1 {
+.text-block-work h1 {
   font-size: 1.8em;
   margin-bottom: 0.5em;
 }
 
-.text-block p {
+.text-block-work p {
   font-size: 1em;
   line-height: 1.5;
   margin-bottom: 1em;
 }
 
-.text-block .links {
+.text-block-work .links-work {
   list-style-type: none; /* Verwijder de standaard lijststijl */
   padding: 0;
   margin: 0;
 }
 
-.text-block .links li {
+.text-block-work .links-work li {
   margin-bottom: 0.5em;
 }
 
-.text-block .links li a {
+.text-block-work .links-work li a {
   color: #EEEE9B; /* Geel standaardkleur */
   text-decoration: none;
   font-size: 1em;
   transition: color 0.3s ease;
 }
 
-.text-block .links li a:hover {
+.text-block-work .links-work li a:hover {
   color: #FFADAD; /* Zalmroze tekst bij hover */
 }
 
-.images {
+.images-work {
   grid-column: 2 / span 2; /* Laat de afbeeldingen de tweede en derde kolom vullen */
   display: grid;
   grid-template-columns: 1fr 1fr; /* Twee kolommen binnen de afbeeldingen-grid */
@@ -402,7 +403,7 @@ body.my-work-page {
   align-items: stretch; /* Zorg dat de afbeeldingen de hoogte van het tekstvak volgen */
 }
 
-.images img {
+.images-work img {
   width: 100%;
   height: 100%; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
   object-fit: cover; /* Vul de ruimte proportioneel zonder witte balken */
@@ -410,23 +411,23 @@ body.my-work-page {
 }
 
 @media (max-width: 768px) {
-  .split-layout {
+  .split-layout-work {
     grid-template-columns: 1fr; /* Maak het grid naar 1 kolom voor kleine schermen */
     gap: 2em; /* Ruimte tussen de items */
     padding: 1.5em; /* Pas de padding aan voor kleinere schermen */
   }
 
-  .text-block {
+  .text-block-work {
     grid-column: 1; /* Tekstvak neemt de volledige breedte in */
     max-width: 100%; /* Zorg dat het tekstvak de volledige breedte gebruikt */
   }
 
-  .images {
+  .images-work {
     grid-column: 1; /* Zet de afbeeldingen onder het tekstvak */
     gap: 1.5em;
   }
 
-  .images img {
+  .images-work img {
     width: 100%; /* Zorg dat de afbeeldingen 100% van de breedte innemen */
     margin-top: 1em; /* Ruimte boven de foto's */
   }
