@@ -41,7 +41,7 @@
 body.home {
   margin: 0;
   padding: 0;
-  background-image: url("images/Layout/fulls/one.jpg");
+  background-image: url("../images/Layout/fulls/one.jpg");
   background-size: cover;
   background-attachment: fixed; /* Zorg dat de afbeelding blijft staan bij scrollen */
   background-position: center;
