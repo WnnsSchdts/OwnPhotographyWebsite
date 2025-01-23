@@ -109,6 +109,7 @@ body.about-me-page {
   grid-template-columns: 1fr 1fr 1fr; /* 3 kolommen: tekst - afbeelding kolom 1 - afbeelding kolom 2 */
   gap: 2em;
   padding: 2em;
+  align-items: start; /* Zorg dat items worden uitgelijnd aan de bovenkant */
 }
 
 .split-layout .row {
@@ -138,12 +139,13 @@ body.about-me-page {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Twee kolommen binnen de afbeeldingen-grid */
   gap: 1em;
+  align-items: stretch; /* Zorg dat de afbeeldingen de hoogte van het tekstvak volgen */
 }
 
 .image-grid img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
+  object-fit: cover; /* Vul de ruimte proportioneel zonder witte balken */
   display: block;
 }
 
