@@ -405,8 +405,8 @@ body.my-work-page {
 
 .images-work img {
   width: 100%;
-  height: 100%; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
-  object-fit: cover; /* Vul de ruimte proportioneel zonder witte balken */
+  height: 100vh; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
+  object-fit: contain; /* Vul de ruimte proportioneel zonder witte balken */
   display: block;
 }
 
