@@ -463,7 +463,7 @@ body.my-stories-page {
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease;
-  border: 2px solid #fff;
+  
 }
 
 /*.photo-section a img {
@@ -485,6 +485,8 @@ body.my-stories-page {
   max-height: 100%; /* Maximaal binnen de containerhoogte */
   object-fit: contain; /* Houd originele verhoudingen */
   display: block; /* Voorkom inline spacing problemen */
+  border: 2px solid #fff;
+  box-sizing: border-box; /* Zorg dat de rand wordt meegerekend in de afmetingen */
 }
 
 .photo-section a:hover {
