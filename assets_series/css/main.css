@@ -302,21 +302,21 @@ body.my-work-page {
 }
 
 .split-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 2em; /* Ruimte tussen secties */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 kolommen: tekst - afbeelding kolom 1 - afbeelding kolom 2 */
+  grid-auto-rows: auto; /* Pas hoogte van de rijen aan de inhoud aan */
+  gap: 2em;
   padding: 2em;
+  align-items: start; /* Zorg dat items worden uitgelijnd aan de bovenkant */
 }
 
 .split-layout .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2em; /* Ruimte tussen tekst en afbeelding */
+  display: contents; /* Zorg ervoor dat alle kinderen van de grid onafhankelijk zijn */
 }
 
 .text-block {
-  max-width: 33%; /* Beperk de breedte van het tekstvak tot 1/3 van de body */
+  grid-column: 1; /* Zet de tekst in de eerste kolom */
+  max-width: 100%; 
   color: #FFADAD; /* Zalmroze tekst */
   text-align: left;
 }
@@ -354,15 +354,18 @@ body.my-work-page {
 }
 
 .images {
-  flex: 1; /* Afbeeldingen nemen gelijke ruimte in */
-  display: flex;
-  justify-content: center; /* Center de afbeeldingen horizontaal */
+  grid-column: 2 / span 2; /* Laat de afbeeldingen de tweede en derde kolom vullen */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Twee kolommen binnen de afbeeldingen-grid */
+  gap: 1em;
+  align-items: stretch; /* Zorg dat de afbeeldingen de hoogte van het tekstvak volgen */
 }
 
 .images img {
-  max-width: 100%; /* Zorg dat de afbeelding binnen het blok past */
-  height: auto;
-  object-fit: contain; /* Houd de afbeelding proportioneel */
+  width: 100%;
+  height: 100%; /* Zorg dat de hoogte van de afbeeldingen wordt aangepast */
+  object-fit: cover; /* Vul de ruimte proportioneel zonder witte balken */
+  display: block;
 }
 
 @media (max-width: 768px) {
