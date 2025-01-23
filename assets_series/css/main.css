@@ -106,6 +106,7 @@ body.about-me-page {
 .split-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 kolommen: tekst - afbeelding kolom 1 - afbeelding kolom 2 */
+  grid-auto-rows: auto; /* Pas hoogte van de rijen aan de inhoud aan */
   gap: 2em;
   padding: 2em;
   align-items: start; /* Zorg dat items worden uitgelijnd aan de bovenkant */
