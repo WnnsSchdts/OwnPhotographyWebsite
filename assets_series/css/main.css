@@ -106,7 +106,7 @@ body.home {
     bottom: 0;
     right: 0;
     padding: 2em;
-    background-color: rgba(0, 0, 0, 0.8); /* Iets donkerdere achtergrond op kleine schermen */
+    background-color: transparent; /* Geen achtergrondkleur */
     text-align: right; /* Zorgt ervoor dat de tekst rechts wordt uitgelijnd */
   }
 
@@ -394,19 +394,23 @@ body.my-work-page {
 
 @media (max-width: 768px) {
   .split-layout {
-    flex-direction: column; /* Schakel over naar een verticale indeling */
-    align-items: flex-start;
+    grid-template-columns: 1fr; /* Maak het grid naar 1 kolom voor kleine schermen */
+    gap: 2em; /* Ruimte tussen de items */
+    padding: 1.5em; /* Pas de padding aan voor kleinere schermen */
   }
 
   .text-block {
-    max-width: 100%; /* Tekstvak neemt de volledige breedte in */
+    grid-column: 1; /* Tekstvak neemt de volledige breedte in */
+    max-width: 100%; /* Zorg dat het tekstvak de volledige breedte gebruikt */
   }
 
   .images {
+    grid-column: 1; /* Zet de afbeeldingen onder het tekstvak */
     gap: 1.5em;
   }
 
   .images img {
+    width: 100%; /* Zorg dat de afbeeldingen 100% van de breedte innemen */
     margin-top: 1em; /* Ruimte boven de foto's */
   }
 }
