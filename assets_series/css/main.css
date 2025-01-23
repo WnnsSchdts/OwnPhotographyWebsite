@@ -465,10 +465,10 @@ body.my-stories-page {
 }*/
 
 .photo-section a img {
+  all: unset; /* Verwijder alle globale stijlen */
   max-height: 100%; /* Pas hoogte aan binnen het vak */
   height: auto; /* Houd de originele hoogteverhouding */
   width: auto; /* Houd de breedteverhouding */
-  display: block;
   object-fit: scale-down; /* Proportioneel schalen zonder vervorming */
 }
 
