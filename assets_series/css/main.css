@@ -454,7 +454,7 @@ body.my-stories-page {
   transition: transform 0.3s ease;
 }
 
-.photo-section a img {
+/*.photo-section a img {
   border: 2px solid #fff;
   width: auto;
   max-width: 100%;
@@ -462,6 +462,16 @@ body.my-stories-page {
   max-height: 100%;
   object-fit: contain;
   display: block;
+}*/
+
+.photo-section a img {
+  max-width: 100%; /* Pas breedte aan binnen het vak */
+  max-height: 100%; /* Pas hoogte aan binnen het vak */
+  object-fit: contain; /* Houd originele verhoudingen aan */
+  display: block;
+
+  /* Zorg ervoor dat portrait-foto's niet worden uitgerekt */
+  aspect-ratio: attr(width) / attr(height); /* Dynamische verhouding */
 }
 
 .photo-section a:hover {
