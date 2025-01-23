@@ -188,14 +188,14 @@ body.a-little-preview-page {
 
 
 /* --------------------- Photo-section stijl --------------------- */
-.photo-section {
+.photo-section-preview {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: var(--gap);
   padding: 20px;
 }
 
-.photo-section a {
+.photo-section-preview a {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -206,7 +206,7 @@ body.a-little-preview-page {
   transition: transform 0.3s ease;
 }
 
-.photo-section a img {
+.photo-section-preview a img {
   border: 2px solid #fff;
   width: auto;
   max-width: 100%;
@@ -216,7 +216,7 @@ body.a-little-preview-page {
   display: block;
 }
 
-.photo-section a:hover {
+.photo-section-preview a:hover {
   transform: scale(1.05);
 }
 
@@ -277,12 +277,12 @@ body.a-little-preview-page {
 
 /* --------------------- Responsieve ruimte --------------------- */
 @media (max-width: 768px) {
-  .photo-section {
+  .photo-section-preview {
     grid-template-columns: 1fr;
     gap: calc(1% + 0.2vw);
   }
 
-  .photo-section a img {
+  .photo-section-preview a img {
     width: 100%;
     height: auto;
   }
@@ -465,13 +465,11 @@ body.my-stories-page {
 }*/
 
 .photo-section a img {
-  max-width: 100%; /* Pas breedte aan binnen het vak */
   max-height: 100%; /* Pas hoogte aan binnen het vak */
-  object-fit: contain; /* Houd originele verhoudingen aan */
+  height: auto; /* Houd de originele hoogteverhouding */
+  width: auto; /* Houd de breedteverhouding */
   display: block;
-
-  /* Zorg ervoor dat portrait-foto's niet worden uitgerekt */
-  aspect-ratio: attr(width) / attr(height); /* Dynamische verhouding */
+  object-fit: scale-down; /* Proportioneel schalen zonder vervorming */
 }
 
 .photo-section a:hover {
