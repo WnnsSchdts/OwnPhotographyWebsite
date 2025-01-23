@@ -32,49 +32,28 @@
   color: #FFADAD; /* Zalmroze bij hover */
 }
 
-/* --------------------- Verberg de normale knoppen en toon de menu knop op kleinere schermen --------------------- */
+/* --------------------- Aanpassing voor kleinere schermen ---------------------*/
+
 @media (max-width: 768px) {
+  .header-bar {
+    padding: 1em; /* Verminder padding aan de zijkanten op kleinere schermen */
+  }
+
+  .header-bar .title {
+    font-size: 1em; /* Verklein de titel voor kleinere schermen */
+  }
+
+  /* Maak de knoppen kleiner en dichter bij elkaar */
+  .header-bar .nav-link {
+    font-size: 0.9em; /* Verklein de tekstgrootte van de knoppen */
+    padding: 0.5em; /* Verklein de padding rondom de knoppen */
+  }
+
   .header-bar .nav-links {
-    display: none; /* Verberg de knoppen op kleinere schermen */
-  }
-  
-  .header-bar .menu-button {
-    display: block; /* Toon de menu knop */
-    color: #000; 
-    border: none;
-    padding: 0.8em 1.5em;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .header-bar .menu-button:hover {
-    background-color: #FFADAD; /* Iets donkerder bij hover */
-  }
-
-  /* --------------------- Dropdownmenu, standaard verborgen --------------------- */
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 60px; /* Zet het dropdownmenu onder de header */
-    right: 20px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 200px;
-  }
-
-  .dropdown-menu .nav-link {
-    padding: 1em;
-    display: block;
-    text-align: left;
-  }
-
-  .dropdown-menu .nav-link:hover {
-    background-color: #f1f1f1;
+    display: flex;
+    gap: 1em; /* Verklein de ruimte tussen de knoppen */
   }
 }
-
 
 /* ----------------------------------------------------------*/
 /* --------------------- Home Page --------------------- */
