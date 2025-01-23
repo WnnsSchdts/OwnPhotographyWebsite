@@ -443,13 +443,26 @@ body.my-stories-page {
   padding: 20px;
 }
 
-.photo-section a {
+/*.photo-section a {
   display: flex;
   justify-content: center;
-  align-items: center; /* Verander 'flex-start' naar 'center' */
+  align-items: center; 
   background-color: #000;
   padding: 15px;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}*/
+
+.photo-section a {
+  position: relative; /* Nodig voor het vierkant maken met padding hack */
+  width: 100%; /* Breedte van de grid-kolom */
+  padding-top: 100%; /* Zorg dat de hoogte gelijk is aan de breedte (vierkant) */
+  background-color: #000; /* Achtergrondkleur voor lege ruimte */
+  overflow: hidden; /* Verberg overlopen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -465,11 +478,10 @@ body.my-stories-page {
 }*/
 
 .photo-section a img {
-  all: unset; /* Verwijder alle globale stijlen */
-  max-height: 100%; /* Pas hoogte aan binnen het vak */
-  height: auto; /* Houd de originele hoogteverhouding */
-  width: auto; /* Houd de breedteverhouding */
-  object-fit: scale-down; /* Proportioneel schalen zonder vervorming */
+  max-width: 100%; /* Breedte aanpassen aan container */
+  max-height: 100%; /* Hoogte aanpassen aan container */
+  object-fit: contain; /* Zorg dat de afbeelding proportioneel blijft */
+  display: block; /* Verwijder inline spacing */
 }
 
 .photo-section a:hover {
