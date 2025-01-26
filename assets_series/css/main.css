@@ -134,7 +134,7 @@ body.about-me-page {
   grid-auto-rows: auto; /* Pas hoogte van de rijen aan de inhoud aan */
   gap: 2em;
   padding: 2em;
-  align-items: start; /* Zorg dat items worden uitgelijnd aan de bovenkant */
+  align-items: center;
 }
 
 .split-layout-about .row-about {
